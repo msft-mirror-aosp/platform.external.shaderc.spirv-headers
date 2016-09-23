@@ -42,7 +42,7 @@
 spv = {
     'MagicNumber' : 0x07230203,
     'Version' : 0x00010000,
-    'Revision' : 6,
+    'Revision' : 7,
     'OpCodeMask' : 0xffff,
     'WordCountShift' : 16,
 
@@ -391,6 +391,11 @@ spv = {
         'SubgroupLocalInvocationId' : 41,
         'VertexIndex' : 42,
         'InstanceIndex' : 43,
+        'SubgroupEqMaskKHR' : 4416,
+        'SubgroupGeMaskKHR' : 4417,
+        'SubgroupGtMaskKHR' : 4418,
+        'SubgroupLeMaskKHR' : 4419,
+        'SubgroupLtMaskKHR' : 4420,
     },
 
     'SelectionControlShift' : {
@@ -556,6 +561,7 @@ spv = {
         'StorageImageReadWithoutFormat' : 55,
         'StorageImageWriteWithoutFormat' : 56,
         'MultiViewport' : 57,
+        'SubgroupBallotKHR' : 4423,
     },
 
     'Op' : {
@@ -853,6 +859,8 @@ spv = {
         'OpAtomicFlagTestAndSet' : 318,
         'OpAtomicFlagClear' : 319,
         'OpImageSparseRead' : 320,
+        'OpSubgroupBallotKHR' : 4421,
+        'OpSubgroupFirstInvocationKHR' : 4422,
     },
 
 }

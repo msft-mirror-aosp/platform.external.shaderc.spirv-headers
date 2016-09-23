@@ -51,11 +51,11 @@
 typedef unsigned int SpvId;
 
 #define SPV_VERSION 0x10000
-#define SPV_REVISION 6
+#define SPV_REVISION 7
 
 static const unsigned int SpvMagicNumber = 0x07230203;
 static const unsigned int SpvVersion = 0x00010000;
-static const unsigned int SpvRevision = 6;
+static const unsigned int SpvRevision = 7;
 static const unsigned int SpvOpCodeMask = 0xffff;
 static const unsigned int SpvWordCountShift = 16;
 
@@ -423,6 +423,11 @@ typedef enum SpvBuiltIn_ {
     SpvBuiltInSubgroupLocalInvocationId = 41,
     SpvBuiltInVertexIndex = 42,
     SpvBuiltInInstanceIndex = 43,
+    SpvBuiltInSubgroupEqMaskKHR = 4416,
+    SpvBuiltInSubgroupGeMaskKHR = 4417,
+    SpvBuiltInSubgroupGtMaskKHR = 4418,
+    SpvBuiltInSubgroupLeMaskKHR = 4419,
+    SpvBuiltInSubgroupLtMaskKHR = 4420,
     SpvBuiltInMax = 0x7fffffff,
 } SpvBuiltIn;
 
@@ -598,6 +603,7 @@ typedef enum SpvCapability_ {
     SpvCapabilityStorageImageReadWithoutFormat = 55,
     SpvCapabilityStorageImageWriteWithoutFormat = 56,
     SpvCapabilityMultiViewport = 57,
+    SpvCapabilitySubgroupBallotKHR = 4423,
     SpvCapabilityMax = 0x7fffffff,
 } SpvCapability;
 
@@ -896,6 +902,8 @@ typedef enum SpvOp_ {
     SpvOpAtomicFlagTestAndSet = 318,
     SpvOpAtomicFlagClear = 319,
     SpvOpImageSparseRead = 320,
+    SpvOpSubgroupBallotKHR = 4421,
+    SpvOpSubgroupFirstInvocationKHR = 4422,
     SpvOpMax = 0x7fffffff,
 } SpvOp;
 
