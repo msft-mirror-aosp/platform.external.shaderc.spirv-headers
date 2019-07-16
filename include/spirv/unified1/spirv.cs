@@ -453,6 +453,7 @@ namespace Spv
             HlslCounterBufferGOOGLE = 5634,
             HlslSemanticGOOGLE = 5635,
             UserSemantic = 5635,
+            UserTypeGOOGLE = 5636,
         }
 
         public enum BuiltIn
@@ -633,6 +634,7 @@ namespace Spv
             OutputMemoryKHR = 12,
             MakeAvailableKHR = 13,
             MakeVisibleKHR = 14,
+            Volatile = 15,
         }
 
         public enum MemorySemanticsMask
@@ -651,6 +653,7 @@ namespace Spv
             OutputMemoryKHR = 0x00001000,
             MakeAvailableKHR = 0x00002000,
             MakeVisibleKHR = 0x00004000,
+            Volatile = 0x00008000,
         }
 
         public enum MemoryAccessShift
@@ -847,6 +850,7 @@ namespace Spv
             FragmentShaderShadingRateInterlockEXT = 5372,
             ShaderSMBuiltinsNV = 5373,
             FragmentShaderPixelInterlockEXT = 5378,
+            DemoteToHelperInvocationEXT = 5379,
             SubgroupShuffleINTEL = 5568,
             SubgroupBufferBlockIOINTEL = 5569,
             SubgroupImageBlockIOINTEL = 5570,
@@ -1235,6 +1239,8 @@ namespace Spv
             OpCooperativeMatrixLengthNV = 5362,
             OpBeginInvocationInterlockEXT = 5364,
             OpEndInvocationInterlockEXT = 5365,
+            OpDemoteToHelperInvocationEXT = 5380,
+            OpIsHelperInvocationEXT = 5381,
             OpSubgroupShuffleINTEL = 5571,
             OpSubgroupShuffleDownINTEL = 5572,
             OpSubgroupShuffleUpINTEL = 5573,

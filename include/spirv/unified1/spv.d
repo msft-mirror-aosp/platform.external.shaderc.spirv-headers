@@ -456,6 +456,7 @@ enum Decoration : uint
     HlslCounterBufferGOOGLE = 5634,
     HlslSemanticGOOGLE = 5635,
     UserSemantic = 5635,
+    UserTypeGOOGLE = 5636,
 }
 
 enum BuiltIn : uint
@@ -636,6 +637,7 @@ enum MemorySemanticsShift : uint
     OutputMemoryKHR = 12,
     MakeAvailableKHR = 13,
     MakeVisibleKHR = 14,
+    Volatile = 15,
 }
 
 enum MemorySemanticsMask : uint
@@ -654,6 +656,7 @@ enum MemorySemanticsMask : uint
     OutputMemoryKHR = 0x00001000,
     MakeAvailableKHR = 0x00002000,
     MakeVisibleKHR = 0x00004000,
+    Volatile = 0x00008000,
 }
 
 enum MemoryAccessShift : uint
@@ -850,6 +853,7 @@ enum Capability : uint
     FragmentShaderShadingRateInterlockEXT = 5372,
     ShaderSMBuiltinsNV = 5373,
     FragmentShaderPixelInterlockEXT = 5378,
+    DemoteToHelperInvocationEXT = 5379,
     SubgroupShuffleINTEL = 5568,
     SubgroupBufferBlockIOINTEL = 5569,
     SubgroupImageBlockIOINTEL = 5570,
@@ -1238,6 +1242,8 @@ enum Op : uint
     OpCooperativeMatrixLengthNV = 5362,
     OpBeginInvocationInterlockEXT = 5364,
     OpEndInvocationInterlockEXT = 5365,
+    OpDemoteToHelperInvocationEXT = 5380,
+    OpIsHelperInvocationEXT = 5381,
     OpSubgroupShuffleINTEL = 5571,
     OpSubgroupShuffleDownINTEL = 5572,
     OpSubgroupShuffleUpINTEL = 5573,
