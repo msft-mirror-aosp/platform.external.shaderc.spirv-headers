@@ -209,10 +209,29 @@ python3 bin/makeExtinstHeaders.py
      to record the SPIR-V headers used by that version of the Vulkan SDK.  For
      example, the tag `vulkan-sdk-1.X.YYY.Z` indicates the SPIR-V headers that
      were included in the Vulkan SDK version `1.X.YYY.Z`.
-  2. For other uses, the repo is tagged using a [CalVer](https://calver.org/)
-     date-based scheme on an as-needed basis.  For example, the tag `vYYYY.0M.R`
-     indicates release `R` of the SPIR-V headers in the zero-padded month `0M`
-     of the full year `YYYY`.
+  2. For other uses, the repo is tagged on an as-needed basis using a scheme
+     that uses both [Semantic Versioning](https://semver.org)
+     and [Calendar Versioning](https://calver.org) conventions.
+
+     The tag is of the form:
+
+         v1.YYYY0M.R
+
+     representing version number `1.YYYY0M.R`:
+
+     * The first numbered component is `1`:
+         * This fits with Semantic Versioning because updates should always be
+             backward compatible. Keeping the major version fixed reduces churn
+             for downstream users when they pull in a new release of
+             SPIRV-Headers.
+         * If the project needs to break backward compatibiliy, then the `1`
+             will be incremented.
+     * The next components are date-based, following Calendar Versioning
+       conventions:
+         * `YYYY0M`: A four-digit year, and a two-digit zero-padded month
+             number.
+         * `R`: A release number, incremented as needed within the month.
+
   3. Other, older tagging conventions previously existed in this repo, but are
      no longer actively used.
 
